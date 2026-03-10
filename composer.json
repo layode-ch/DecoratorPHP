@@ -1,0 +1,9 @@
+{
+    "name": "joao/decorator-php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "DecoratorPHP\\": "src/"
+        }
+    }
+}
