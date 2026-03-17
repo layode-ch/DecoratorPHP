@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__."/../vendor/autoload.php";
 
+use DecoratorPHP\Components\Card;
 use DecoratorPHP\Components\Button;
 use DecoratorPHP\Components\Component;
 use DecoratorPHP\Decorators\BackgroundColor;
@@ -22,6 +23,10 @@ $component = new BackgroundColor($component, "blue");
 $component = new Box($component, 50);
 $component = new Hover($component, $style);
 $component = new ComponentStyle($component, ["duration-100"]);
+
+
+$card = new Card(1,1);
+
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +40,27 @@ $component = new ComponentStyle($component, ["duration-100"]);
 <body>
     <div class="flex w-[100vw] h-[100vh]">
         <div class="w-1/5 h-full bg-red-100">
+            
+            <form class="p-4 gap-4 flex flex-col">
+
+                <label for="font-size">Font size</label>
+
+                <select name="font-size">
+                    <option value="xs">Extra small</option>
+                    <option value="sm">Small</option>
+                    <option value="md">Medium</option>
+                    <option value="lg">Large</option>
+                    <option value="xl">Extra large</option>
+                    <option value="2xl">Extra large</option>
+                    <option value="3xl">3XL</option>
+                    <option value="4xl">4XL</option>
+                </select>
+
+                <label for="border-radius">Border radius</label>
+                <input name="border-radius" type="range" min="0" max="9">
+
+                <button type="submit" class="bg-gray-300 p-3s">Generate</button>
+            </form>
 
         </div>
         <div class="w-4/5 h-full bg-blue-100 grid p-2
@@ -42,6 +68,7 @@ $component = new ComponentStyle($component, ["duration-100"]);
         grid-cols-8
         grid-rows-6"
         >
+            <?= $card ?>
             <div class="col-span-2 row-span-1 bg-green-100">
 
             </div>
