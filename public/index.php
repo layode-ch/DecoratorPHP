@@ -24,8 +24,8 @@ $component = new Box($component, 50);
 $component = new Hover($component, $style);
 $component = new ComponentStyle($component, ["duration-100"]);
 
-
 $card = new Card(1,1);
+$card2 = new Card(2,1);
 
 ?>
 
@@ -69,30 +69,8 @@ $card = new Card(1,1);
         grid-rows-6"
         >
             <?= $card ?>
-            <div class="col-span-2 row-span-1 bg-green-100">
-
-            </div>
-            <div class="col-span-4 row-span-2 bg-green-100">
-
-            </div>
-            <div class="col-span-2 row-span-3 bg-green-100">
-
-            </div>
-            <div class="col-span-2 row-span-1 bg-green-100">
-
-            </div>
-            <div class="col-span-3 row-span-2 bg-green-100">
-
-            </div>
-            <div class="col-span-3 row-span-2 bg-green-100">
-
-            </div>
-            <div class="col-span-3 row-span-2 bg-green-100">
-
-            </div>
-            <div class="col-span-2 row-span-1 bg-green-100">
-
-            </div>
+            <?= $card2 ?>
+           
         </div>
     </div>
 </body>
