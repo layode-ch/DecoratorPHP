@@ -3,7 +3,7 @@ namespace DecoratorPHP\Components;
 
 use DecoratorPHP\Decorators\Border;
 use DecoratorPHP\Decorators\BorderRound;
-use DecoratorPHP\Enums\Sizes;
+use DecoratorPHP\Decorators\InputBackground;
 
 class Input extends Component {
     
@@ -12,8 +12,9 @@ class Input extends Component {
     public function __construct(string $type = "text") {
         parent::__construct();
         $this->type = $type;
-        $component = new Border(new Component($this->textContent), 10, "indigo-500");
-        $component = new BorderRound($component, Sizes::MEDIUM);
+        $component = new Border($this, 10, "indigo-500");
+        $component = new BorderRound($component);
+        $component = new InputBackground($component);
         $this->classList = array_merge($this->classList, $component->classList);
     }
 

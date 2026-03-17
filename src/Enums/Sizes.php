@@ -2,6 +2,7 @@
 namespace DecoratorPHP\Enums;
 
 enum Sizes:string {
+    case NONE = "none";
     case EXTRA_SMALL = "xs";
     case SMALL = "sm";
     case MEDIUM = "md";
