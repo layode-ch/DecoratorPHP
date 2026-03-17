@@ -33,6 +33,40 @@ $component = new ComponentStyle($component, ["duration-100"]);
     <title>Document</title>
 </head>
 <body>
-    <?= $component ?>
+    <div class="flex w-[100vw] h-[100vh]">
+        <div class="w-1/5 h-full bg-red-100">
+
+        </div>
+        <div class="w-4/5 h-full bg-blue-100 grid p-2
+        gap-2
+        grid-cols-8
+        grid-rows-6"
+        >
+            <div class="col-span-2 row-span-1 bg-green-100">
+
+            </div>
+            <div class="col-span-4 row-span-2 bg-green-100">
+
+            </div>
+            <div class="col-span-2 row-span-3 bg-green-100">
+
+            </div>
+            <div class="col-span-2 row-span-1 bg-green-100">
+
+            </div>
+            <div class="col-span-3 row-span-2 bg-green-100">
+
+            </div>
+            <div class="col-span-3 row-span-2 bg-green-100">
+
+            </div>
+            <div class="col-span-3 row-span-2 bg-green-100">
+
+            </div>
+            <div class="col-span-2 row-span-1 bg-green-100">
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
