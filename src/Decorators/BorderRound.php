@@ -9,7 +9,7 @@ class BorderRound extends ComponentStyle {
     public function __construct(IComponent $component) {
         $radius = Theme::$BORDER_RADIUS;
         if (!($radius instanceof Sizes)){
-            if (gettype($radius) === "int")
+            if (gettype($radius) === "integer")
                 $radius = Sizes::cases()[$radius];
             else
                 $radius = Sizes::from($radius);
