@@ -2,7 +2,7 @@
 namespace DecoratorPHP\Enums;
 
 class Theme {
-    static string   $BORDER_RADIUS          = "sm";
+    static int   $BORDER_RADIUS          = 1;
     static string   $ACCENT_BACKGROUND_COLOR = "blue-600";
     static string   $ACCENT_FOREGROUND_COLOR = "white-600";
     static string   $BASE_BACKGROUND_COLOR;
