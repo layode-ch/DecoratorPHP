@@ -3,7 +3,7 @@ namespace DecoratorPHP\Components;
 
 use DecoratorPHP\Decorators\Border;
 use DecoratorPHP\Decorators\BorderRound;
-use DecoratorPHP\Decorators\BaseBackgroundColor;
+use DecoratorPHP\Decorators\BaseColor;
 use DecoratorPHP\Enums\Sizes;
 
 class Card extends Component {
@@ -14,7 +14,7 @@ class Card extends Component {
         $this->classList[] = "col-span-" . $cols;
         $this->classList[] = "row-span-" . $rows;
 
-        $component = new BaseBackgroundColor(new Component($this->textContent));
+        $component = new BaseColor(new Component($this->textContent));
         $component = new BorderRound($component);
 
         $this->classList = array_merge($this->classList, $component->classList);
