@@ -5,6 +5,7 @@ namespace DecoratorPHP\Components;
 use DecoratorPHP\Decorators\BackgroundColor;
 use DecoratorPHP\Decorators\Border;
 use DecoratorPHP\Decorators\BorderRound;
+use DecoratorPHP\Decorators\Color;
 use DecoratorPHP\Enums\AlertType;
 use DecoratorPHP\Enums\Sizes;
 use DecoratorPHP\Enums\Theme;
@@ -21,8 +22,7 @@ class Alert extends Component
         $this->type = $type;
         $this->message = $message;
         $component = new Border(new Component($this->textContent), 10, $type->value . '-500');
-        $component = new BorderRound($component);
-        $component = new BackgroundColor($component, $type->value, 500);
+        $component = new Color($component, $type->value, "red-500");
         $this->classList = array_merge($this->classList, $component->classList);
     }
 

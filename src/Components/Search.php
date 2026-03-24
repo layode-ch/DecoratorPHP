@@ -2,8 +2,7 @@
 namespace DecoratorPHP\Components;
 
 use DecoratorPHP\Decorators\Border;
-use DecoratorPHP\Decorators\BorderRound;
-use DecoratorPHP\Decorators\InputBackground;
+use DecoratorPHP\Decorators\InputColor;
 
 class Search extends Component {
     
@@ -13,8 +12,7 @@ class Search extends Component {
         parent::__construct();
         $this->type = $type;
         $component = new Border($this, 3, "black-500");
-        $component = new BorderRound($component);
-        $component = new InputBackground($component);
+        $component = new InputColor($component);
         $this->classList = array_merge($this->classList, $component->classList);
     }
 
