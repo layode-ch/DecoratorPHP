@@ -1,9 +1,10 @@
 <?php
 namespace DecoratorPHP\Components;
 
+use DecoratorPHP\Decorators\BaseBorder;
 use DecoratorPHP\Decorators\Border;
 use DecoratorPHP\Decorators\BorderRound;
-use DecoratorPHP\Decorators\InputBackground;
+use DecoratorPHP\Decorators\InputColor;
 
 class Input extends Component {
     
@@ -12,9 +13,8 @@ class Input extends Component {
     public function __construct(string $type = "text") {
         parent::__construct();
         $this->type = $type;
-        $component = new Border($this, 10, "indigo-500");
-        $component = new BorderRound($component);
-        $component = new InputBackground($component);
+        $component = new BaseBorder($this);
+        $component = new InputColor($component);
         $this->classList = array_merge($this->classList, $component->classList);
     }
 

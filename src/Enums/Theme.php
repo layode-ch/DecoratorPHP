@@ -10,4 +10,7 @@ class Theme {
     static string   $BASE_FOREGROUND_COLOR      = "white-300";
     static string   $INPUT_BACKGROUND_COLOR     = "red-500";
     static int      $INPUT_BACKGROUND_INTENSITY = 500;
+    static int $BASE_BORDER_SIZE = 2;
+    static string $BASE_BORDER_COLOR = "blue-500";
+    static int $BASE_BORDER_RADIUS = 1;
 }
