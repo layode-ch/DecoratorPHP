@@ -9,6 +9,6 @@ enum Sizes:string {
     case LARGE = "lg";
     case EXTRA_LARGE = "xl";
     case DOUBLE_EXTRA_LARGE = "2xl";
-    case TRIPPLE_EXTRA_LARGE = "3xl";
+    case TRIPLE_EXTRA_LARGE = "3xl";
     case QUADRUPLE_EXTRA_LARGE = "4xl";
 }
