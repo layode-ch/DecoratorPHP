@@ -77,11 +77,11 @@ $cardAlerts->textContent .= new Alert("Error", AlertType::ERROR);
                     <input type="radio" name="accent-bg" value="green-300"  class="appearance-none w-10 h-10 bg-green-300 rounded-sm" <?= Theme::$ACCENT_BACKGROUND_COLOR == "green-300" ? "checked" : "" ?>>
                 </ul>
 
-                <label for="accent-bg">Accent border color</label>
+                <label for="accent-bg">Input border color</label>
                 <ul class="flex gap-4">
-                    <input type="radio" name="input-border" value="blue-300"   class="appearance-none w-10 h-10 bg-blue-300 rounded-sm"  <?= Theme::$INPUT_BORDER_COLOR == "blue-300" ? "checked" : "" ?>>
-                    <input type="radio" name="input-border" value="red-300"    class="appearance-none w-10 h-10 bg-red-300 rounded-sm"   <?= Theme::$INPUT_BORDER_COLOR == "red-300" ? "checked" : "" ?>>
-                    <input type="radio" name="input-border" value="green-300"  class="appearance-none w-10 h-10 bg-green-300 rounded-sm" <?= Theme::$INPUT_BORDER_COLOR == "green-300" ? "checked" : "" ?>>
+                    <input type="radio" name="input-border-color" value="blue-300"   class="appearance-none w-10 h-10 bg-blue-300 rounded-sm"  <?= Theme::$INPUT_BORDER_COLOR == "blue-300" ? "checked" : "" ?>>
+                    <input type="radio" name="input-border-color" value="red-300"    class="appearance-none w-10 h-10 bg-red-300 rounded-sm"   <?= Theme::$INPUT_BORDER_COLOR == "red-300" ? "checked" : "" ?>>
+                    <input type="radio" name="input-border-color" value="green-300"  class="appearance-none w-10 h-10 bg-green-300 rounded-sm" <?= Theme::$INPUT_BORDER_COLOR == "green-300" ? "checked" : "" ?>>
                 </ul>
 
                 <button type="submit" class="bg-gray-200 p-3 rounded-sm">Generate</button>
