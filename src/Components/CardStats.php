@@ -15,15 +15,15 @@ class CardStats extends Card
 
         $this->textContent = '
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<div class="flex items-center justify-between mb-1">
-    <span class="text-xs font-semibold uppercase tracking-widest text-gray-400">Revenue</span>
-    <i class="bi bi-currency-dollar text-gray-400"></i>
+<div class="flex text-black items-center justify-between mb-1">
+    <span class="text-xs font-semibold uppercase tracking-widest text-black">Revenue</span>
+    <i class="bi bi-currency-dollar text-black"></i>
 </div>
-<strong class="text-3xl font-bold tracking-tight text-gray-800">10.5K <span class="text-base font-medium text-gray-400">CHF</span></strong>
-<div class="flex items-center gap-1 mt-3">
+<strong class="text-3xl font-bold tracking-tight text-gray-800">10.5K <span class="text-base font-medium text-black">CHF</span></strong>
+<div class="flex text-black items-center gap-1 mt-3">
     <i class="bi bi-graph-up-arrow text-green-500 text-sm"></i>
     <span class="text-sm font-medium text-green-500">+32%</span>
-    <span class="text-sm text-gray-400">vs last month</span>
+    <span class="text-sm text-black">more than last month</span>
 </div>
 ';
     }
