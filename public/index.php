@@ -42,6 +42,7 @@ $card2->textContent = "Card Text";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Decorator</title>
 </head>
 <body>
@@ -130,26 +131,29 @@ $card2->textContent = "Card Text";
             <div class="flex justify-between bg-white max-w-sm w-full p-6 border border-gray-200 rounded-xl shadow-sm col-span-2 row-span-1">
                 <div>
                     <h1>Revenue</h1>
-                    <strong class="text-2xl">10.5 k chf</strong>
+                    <strong class="text-2xl">10.5 K CHF.-</strong>
                     <div class="flex mt-5">
-                        <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
-                        </svg>
+                        <i class="bi bi-graph-up-arrow"></i>
                         <p> 32% more than last month</p>
                     </div>
                 </div>
             </div>
 
-            <div class="flex justify-between bg-white max-w-sm w-full p-6 border border-gray-200 rounded-xl shadow-sm col-span-2 row-span-2">
+            <div class="flex justify-between bg-white max-w-sm w-full p-6 border border-gray-200 rounded-xl shadow-sm col-span-2 row-span-3 ">
                 <div>
-                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="">
+                    <img class="rounded-lg" src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="">
                     <div class="flex justify-between mt-5">
                         <h3 class="text-xl">Nike Shoes</h3>
-                        <p>En stock</p>
-                        
+                        <p class="bg-green-500 px-2 py-1 rounded-full">En stock</p>
                     </div>
                     <p class="mt-3 mb-3 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus libero accusamus qui nisi officia corporis distinctio porro ipsa necessitatibus .</p>
-                    <p  class=" text-xl">56 chf</p>
+                    <div class="flex align-center justify-between">
+                        <p class=" text-xl">56 CHF</p>
+                        <div class="w-fit">
+                            <button class="bg-red-500 px-4 py-1 rounded-sm" >Buy</button>
+                            <button class="bg-red-500 px-4 py-1 rounded-sm" >Sell</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
