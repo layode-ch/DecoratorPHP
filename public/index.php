@@ -15,8 +15,9 @@ Theme::$BASE_BORDER_SIZE        = isset($_GET["base-border-size"])      ? (int)$
 
 Theme::$INPUT_BORDER_RADIUS     = isset($_GET["input-border-radius"])   ? (int)$_GET["input-border-radius"] : 1;
 Theme::$INPUT_BORDER_SIZE       = isset($_GET["input-border-size"])     ? (int)$_GET["input-border-size"] : 1;
+Theme::$INPUT_BORDER_COLOR       = isset($_GET["input-border-color"])   ? $_GET["input-border-color"] : "blue-500";
 
-Theme::$BASE_BACKGROUND_COLOR   = $_GET["base-bg"] ?? "neutral-200";
+Theme::$BASE_BACKGROUND_COLOR   = $_GET["base-bg"] ?? "neutral-200";    
 Theme::$ACCENT_BACKGROUND_COLOR = $_GET["accent-bg"] ?? "neutral-400";
 
 // $card->textContent = $component;
@@ -25,16 +26,8 @@ $productCard = new ProductCard(2,3);
 $cardStats = new CardStats(2,1);
 $cardSlider = new Card(1,1);
 
-$cardButtons = new Card(2,1);
-
-$btnAccent = new Button();
-$btnAccent->textContent = "Submit";
-$btnAccent = new AccentColor($btnAccent);
-$cardButtons->textContent = $btnAccent;
-
-
 $cardSlider->textContent = '
-<div class="h-full w-full flex flex-col items-center gap-4">
+<div class="h-full w-full flex flex-col items-center gap-4 py-2">
     <h2 class="flex items-center justify-between">
         <span class="flex items-center gap-2 font-semibold">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-40"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path></svg> 
@@ -63,18 +56,6 @@ $cardSlider->textContent = '
             <form class="p-4 gap-4 flex flex-col">
                 <h1 class="text-4xl font-semibold">Decorator 🐘</h1>
 
-                <label for="font-size" class="text-lg">Font size</label>
-                <select name="font-size" class="p-2 bg-neutral-200 rounded-sm" >
-                    <option value="xs">Extra small</option>
-                    <option value="sm">Small</option>
-                    <option value="md">Medium</option>
-                    <option value="lg">Large</option>
-                    <option value="xl">Extra large</option>
-                    <option value="2xl">Extra large</option>
-                    <option value="3xl">3XL</option>
-                    <option value="4xl">4XL</option>
-                </select>
-
                 <label for="base-border-radius" class="text-lg" >Base border radius</label>
                 <input name="base-border-radius" type="range" min="0" max="8" value="<?= Theme::$BASE_BORDER_RADIUS ?>">
 
@@ -98,6 +79,13 @@ $cardSlider->textContent = '
                     <input type="radio" name="accent-bg" value="green-300"  class="appearance-none w-10 h-10 bg-green-300 rounded-sm" <?= Theme::$ACCENT_BACKGROUND_COLOR == "green-300" ? "checked" : "" ?>>
                 </ul>
 
+                <label for="accent-bg">Accent border color</label>
+                <ul class="flex gap-4">
+                    <input type="radio" name="input-border" value="blue-300"   class="appearance-none w-10 h-10 bg-blue-300 rounded-sm"  <?= Theme::$INPUT_BORDER_COLOR == "blue-300" ? "checked" : "" ?>>
+                    <input type="radio" name="input-border" value="red-300"    class="appearance-none w-10 h-10 bg-red-300 rounded-sm"   <?= Theme::$INPUT_BORDER_COLOR == "red-300" ? "checked" : "" ?>>
+                    <input type="radio" name="input-border" value="green-300"  class="appearance-none w-10 h-10 bg-green-300 rounded-sm" <?= Theme::$INPUT_BORDER_COLOR == "green-300" ? "checked" : "" ?>>
+                </ul>
+
                 <button type="submit" class="bg-gray-200 p-3 rounded-sm">Generate</button>
             </form>
         </div>
@@ -109,7 +97,6 @@ $cardSlider->textContent = '
 
             <?= $cardForm ?>
             <?= $cardStats ?>
-            <?= $cardButtons ?>
 
            <?= $productCard ?>
             <?= $cardSlider ?>
