@@ -31,12 +31,12 @@ $component = new Box($component, 10, 30);
 */
 
 $card = new Card(3,1);
-$card2 = new Card(4,1);
+$card2 = new Card(2,1);
 
 // $card->textContent = $component;
 $card2->textContent = "Card Text";
 $cardForm = new CardForm(2, 2);
-$productCard = new ProductCard(2,3 );
+$productCard = new ProductCard(2,3);
 $card2->textContent = '
 <div class="flex flex-col justify-between max-w-sm w-full h-full p-6">
     <h1>Revenue</h1>
@@ -127,23 +127,9 @@ $cardSlider->textContent = '
         >
             <?= $card ?>
             <?= $card2 ?>
-
+            <?= $cardSlider ?>
             <?= $cardForm ?>
-
-            <div class="flex justify-between bg-white max-w-sm w-full p-6 border border-gray-200 rounded-xl shadow-sm col-span-2 row-span-1">
-                <div>
-                    <h1>Revenue</h1>
-                    <strong class="text-2xl">10.5 k chf</strong>
-                    <div class="flex mt-5">
-                        <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
-                        </svg>
-                        <p> 32% more than last month</p>
-                    </div>
-                </div>
-            </div>
-
-           <?= $productCard ?>
+            <?= $productCard ?>
         </div>
     </div>
 </body>
