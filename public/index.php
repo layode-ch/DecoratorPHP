@@ -18,7 +18,7 @@ Theme::$ACCENT_BACKGROUND_COLOR = $_GET["accent-bg"] ?? "neutral-400";
 
 // $card->textContent = $component;
 $cardForm = new CardForm(2, 2);
-$productCard = new ProductCard(2,2);
+$productCard = new ProductCard(2,3);
 $cardStats = new CardStats(2,1);
 $cardSlider = new Card(1,1);
 
