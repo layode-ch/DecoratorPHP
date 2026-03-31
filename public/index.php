@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__."/../vendor/autoload.php";
 
+use DecoratorPHP\Components\Alert;
 use DecoratorPHP\Components\Card;
 use DecoratorPHP\Components\CardForm;
 use DecoratorPHP\Components\CardStats;
@@ -8,6 +9,8 @@ use DecoratorPHP\Components\ProductCard;
 use DecoratorPHP\Components\Button;
 use DecoratorPHP\Decorators\BaseColor;
 use DecoratorPHP\Decorators\AccentColor;
+use DecoratorPHP\Decorators\ComponentStyle;
+use DecoratorPHP\Enums\AlertType;
 use DecoratorPHP\Enums\Theme;
 
 Theme::$BASE_BORDER_RADIUS      = isset($_GET["base-border-radius"])    ? (int)$_GET["base-border-radius"] : 1;
@@ -94,7 +97,7 @@ $cardSlider->textContent = '
         grid-cols-8
         grid-rows-6"
         >
-
+            <?= $cardAlerts ?>
             <?= $cardForm ?>
             <?= $cardStats ?>
 

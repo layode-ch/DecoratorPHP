@@ -3,6 +3,7 @@
 namespace DecoratorPHP\Components;
 
 use DecoratorPHP\Decorators\BackgroundColor;
+use DecoratorPHP\Decorators\BaseBorder;
 use DecoratorPHP\Decorators\Border;
 use DecoratorPHP\Decorators\BorderRound;
 use DecoratorPHP\Decorators\Color;
@@ -22,7 +23,7 @@ class Alert extends Component
         parent::__construct();
         $this->type = $type;
         $this->message = $message;
-        $component = new Border($this, 0, $type->value . '-200');
+        $component = new BaseBorder($this);
         $component = new Color($component, $type->value. '-200', "black");
         $component = new ComponentStyle($component, ["h-fit", "w-full", "p-2", "flex", "justify-between", "mb-2"]);
         $this->classList = array_merge($this->classList, $component->classList);
