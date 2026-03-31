@@ -3,6 +3,7 @@ require_once __DIR__."/../vendor/autoload.php";
 
 use DecoratorPHP\Components\Card;
 use DecoratorPHP\Components\CardForm;
+use DecoratorPHP\Components\CardStats;
 use DecoratorPHP\Enums\Theme;
 
 Theme::$BASE_BORDER_RADIUS      = isset($_GET["base-border-radius"])    ? (int)$_GET["base-border-radius"] : 1;
@@ -23,6 +24,7 @@ $component = new Box($component, 10, 30);
 $card = new Card(3,1);
 $card2 = new Card(4,1);
 $cardForm = new CardForm(2, 2);
+$cardStats = new CardStats(2,1);
 // $card->textContent = $component;
 $card2->textContent = "Card Text";
 
@@ -87,17 +89,7 @@ $card2->textContent = "Card Text";
         grid-rows-6"
         >
             <?= $cardForm ?>
-
-            <div class="flex justify-between bg-white max-w-sm w-full p-6 border border-gray-200 rounded-xl shadow-sm col-span-2 row-span-1">
-                <div>
-                    <h1>Revenue</h1>
-                    <strong class="text-2xl">10.5 K CHF.-</strong>
-                    <div class="flex mt-5">
-                        <i class="bi bi-graph-up-arrow"></i>
-                        <p> 32% more than last month</p>
-                    </div>
-                </div>
-            </div>
+            <?= $cardStats ?>
 
             <div class="flex justify-between bg-white max-w-sm w-full p-6 border border-gray-200 rounded-xl shadow-sm col-span-2 row-span-3 ">
                 <div>
