@@ -5,6 +5,9 @@ use DecoratorPHP\Components\Card;
 use DecoratorPHP\Components\CardForm;
 use DecoratorPHP\Components\CardStats;
 use DecoratorPHP\Components\ProductCard;
+use DecoratorPHP\Components\Button;
+use DecoratorPHP\Decorators\BaseColor;
+use DecoratorPHP\Decorators\AccentColor;
 use DecoratorPHP\Enums\Theme;
 
 Theme::$BASE_BORDER_RADIUS      = isset($_GET["base-border-radius"])    ? (int)$_GET["base-border-radius"] : 1;
@@ -21,6 +24,14 @@ $cardForm = new CardForm(2, 2);
 $productCard = new ProductCard(2,2);
 $cardStats = new CardStats(2,1);
 $cardSlider = new Card(1,1);
+
+$cardButtons = new Card(2,1);
+
+$btnAccent = new Button();
+$btnAccent->textContent = "Submit";
+$btnAccent = new AccentColor($btnAccent);
+$cardButtons->textContent = $btnAccent;
+
 
 $cardSlider->textContent = '
 <div class="h-full w-full flex flex-col items-center gap-4">
@@ -98,6 +109,7 @@ $cardSlider->textContent = '
 
             <?= $cardForm ?>
             <?= $cardStats ?>
+            <?= $cardButtons ?>
 
            <?= $productCard ?>
             <?= $cardSlider ?>
