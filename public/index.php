@@ -4,7 +4,6 @@ require_once __DIR__."/../vendor/autoload.php";
 use DecoratorPHP\Components\Card;
 use DecoratorPHP\Components\Button;
 use DecoratorPHP\Components\Component;
-use DecoratorPHP\Components\ProductCard;
 use DecoratorPHP\Decorators\AccentColor;
 use DecoratorPHP\Decorators\Box;
 use DecoratorPHP\Decorators\ComponentStyle;
@@ -31,7 +30,7 @@ $component = new Box($component, 10, 30);
 
 $card = new Card(3,1);
 $card2 = new Card(4,1);
-$productCard = new ProductCard(2, 3);
+
 // $card->textContent = $component;
 $card2->textContent = "Card Text";
 
@@ -95,39 +94,7 @@ $card2->textContent = "Card Text";
         grid-cols-8
         grid-rows-6"
         >
-            <?= $card ?>
-            <?= $card2 ?>
-
-            <div class="bg-white max-w-sm w-full p-6 border border-gray-200 rounded-xl shadow-sm col-span-3 row-span-2">
-                <label class=" h-10 flex items-center gap-2 w-full bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500 transition-all duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                    </svg>
-                    <input type="search" placeholder="Search" class="flex-1 text-sm text-gray-700 placeholder-gray-400 outline-none border-none w-fit" />
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-3 py-1.5 rounded-md transition-all duration-150">
-                        Find
-                    </button>
-                </label>
-                <br>
-                <label class="flex items-center h-10 gap-2 w-full bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500 transition-all duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                    </svg>
-                    <input type="search" placeholder="Username" class="flex-1 text-sm text-gray-700 placeholder-gray-400 outline-none border-none w-fit" />
-                </label>
-                <br>
-                <label class="flex items-center h-10 gap-2 w-full bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500 transition-all duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
-                        <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
-                    </svg>
-                    <input type="password" placeholder="Password" class=" text-sm text-gray-700 placeholder-gray-400 outline-none border-none w-fit" />
-                </label>
-                <br>
-                <label class="flex items-center h-40 gap-2 w-full bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500 transition-all duration-200">
-                    <textarea placeholder="Entrer votre text ici" class="h-35 flex-1 text-sm text-gray-700 placeholder-gray-400 outline-none border-none w-fit"></textarea>
-                </label>
-
-            </div>
+            <?= $cardForm ?>
 
             <div class="flex justify-between bg-white max-w-sm w-full p-6 border border-gray-200 rounded-xl shadow-sm col-span-2 row-span-1">
                 <div>
