@@ -16,26 +16,10 @@ Theme::$INPUT_BORDER_SIZE       = isset($_GET["input-border-size"])     ? (int)$
 Theme::$BASE_BACKGROUND_COLOR   = $_GET["base-bg"] ?? "neutral-200";
 Theme::$ACCENT_BACKGROUND_COLOR = $_GET["accent-bg"] ?? "neutral-400";
 
-$card = new Card(3,1);
-$card2 = new Card(4,1);
+// $card->textContent = $component;
 $cardForm = new CardForm(2, 2);
+$productCard = new ProductCard(2,2);
 $cardStats = new CardStats(2,1);
-$card2->textContent = "Card Text";
-$cardForm = new CardForm(2, 2);
-$productCard = new ProductCard(2,2 );
-$card2->textContent = '
-<div class="flex flex-col justify-between max-w-sm w-full h-full p-6">
-    <h1>Revenue</h1>
-    <strong class="text-2xl">10.5 k chf</strong>
-    <div class="flex mt-5">
-        <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
-        </svg>
-        <p> 32% more than last month</p>
-    </div>
-</div>
-';
-
 $cardSlider = new Card(1,1);
 
 $cardSlider->textContent = '
@@ -116,6 +100,7 @@ $cardSlider->textContent = '
             <?= $cardStats ?>
 
            <?= $productCard ?>
+            <?= $cardSlider ?>
         </div>
     </div>
 </body>
