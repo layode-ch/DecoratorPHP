@@ -3,7 +3,9 @@ require_once __DIR__."/../vendor/autoload.php";
 
 use DecoratorPHP\Components\Card;
 use DecoratorPHP\Components\Button;
+use DecoratorPHP\Components\CardForm;
 use DecoratorPHP\Components\Component;
+use DecoratorPHP\Components\ProductCard;
 use DecoratorPHP\Decorators\AccentColor;
 use DecoratorPHP\Decorators\Box;
 use DecoratorPHP\Decorators\ComponentStyle;
@@ -33,6 +35,8 @@ $card2 = new Card(4,1);
 
 // $card->textContent = $component;
 $card2->textContent = "Card Text";
+$cardForm = new CardForm(2, 2);
+$productCard = new ProductCard(2,3 );
 
 ?>
 
